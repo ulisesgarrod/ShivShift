@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+
 @export var player_reference : CharacterBody2D
 var direction : Vector2
 var speed : float = 100
