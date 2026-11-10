@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://btw4thphoidaw"]
+
+[ext_resource type="Script" uid="uid://uh25txuemlps" path="res://scripts/basic_enemy.gd" id="1_3i4hm"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_w1k3h"]
+size = Vector2(20, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7otec"]
+
+[node name="BasicEnemy" type="CharacterBody2D" unique_id=924022711]
+motion_mode = 1
+script = ExtResource("1_3i4hm")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=936855003]
+texture = SubResource("PlaceholderTexture2D_w1k3h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=25930006]
+shape = SubResource("RectangleShape2D_7otec")

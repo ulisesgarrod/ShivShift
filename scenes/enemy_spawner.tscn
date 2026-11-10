@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://b23k3egejgeoq"]
+
+[ext_resource type="Script" uid="uid://c4p231s88a52n" path="res://scripts/spawner.gd" id="1_devoi"]
+[ext_resource type="PackedScene" uid="uid://btw4thphoidaw" path="res://scenes/basic_enemy.tscn" id="2_xl0gr"]
+
+[node name="EnemySpawner" type="Node2D" unique_id=1826577877]
+script = ExtResource("1_devoi")
+enemy = ExtResource("2_xl0gr")
+
+[node name="UI" type="CanvasGroup" parent="." unique_id=479076558]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI" unique_id=637621746]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Minute" type="Label" parent="UI/HBoxContainer" unique_id=1605554999]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+
+[node name="Label2" type="Label" parent="UI/HBoxContainer" unique_id=63572980]
+layout_mode = 2
+text = ":"
+
+[node name="Second" type="Label" parent="UI/HBoxContainer" unique_id=97434574]
+unique_name_in_owner = true
+layout_mode = 2
+text = "00"
+
+[node name="Timer" type="Timer" parent="UI" unique_id=1027655261]
+autostart = true
+
+[node name="Pattern" type="Timer" parent="UI" unique_id=1868114861]
+wait_time = 10.0
+autostart = true
+
+[node name="Elite" type="Timer" parent="UI" unique_id=1818528600]
+wait_time = 9.0
+autostart = true
+
+[connection signal="timeout" from="UI/Timer" to="." method="_on_timer_timeout"]

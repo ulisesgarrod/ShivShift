@@ -1,8 +1,13 @@
 [gd_scene format=3 uid="uid://blo8ibv7hr35t"]
 
 [ext_resource type="PackedScene" uid="uid://ce4k1xusswwlq" path="res://scenes/player.tscn" id="1_aa26p"]
+[ext_resource type="PackedScene" uid="uid://b23k3egejgeoq" path="res://scenes/enemy_spawner.tscn" id="1_ji8w1"]
 
 [node name="escena" type="Node2D" unique_id=96645501]
+
+[node name="EnemySpawner" parent="." unique_id=1826577877 node_paths=PackedStringArray("player") instance=ExtResource("1_ji8w1")]
+position = Vector2(1101, -9)
+player = NodePath("../Player")
 
 [node name="Player" parent="." unique_id=1041187817 instance=ExtResource("1_aa26p")]
 position = Vector2(623, 299)
